@@ -28,6 +28,12 @@ body header .header-holder {
   position: relative;
 }
 
+@media (max-width: 767px) {
+  body header .header-holder {
+    max-width: 90%;
+  }
+}
+
 body header .header-holder button {
   color: #888888;
   border: 0;
@@ -36,6 +42,18 @@ body header .header-holder button {
   position: relative;
   border: 1px solid transparent;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  body header .header-holder button .label {
+    display: none;
+  }
 }
 
 body header .header-holder button.active {
@@ -68,6 +86,16 @@ body header .header-holder .mycart {
   right: 10%;
 }
 
+body header .header-holder .mycart .mycart-btn .label {
+  margin-right: 4px;
+}
+
+@media (min-width: 767px) {
+  body header .header-holder .mycart .mycart-btn img {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   body header .header-holder .mycart {
     right: 0;
@@ -81,7 +109,7 @@ body header .header-holder .mycart .cart-items {
   border: 1px solid #ccc;
   right: 0;
   color: #222222;
-  min-width: 21.5em;
+  min-width: 18.2em;
   max-height: 34em;
   overflow: auto;
   -webkit-transition: all 200ms linear;

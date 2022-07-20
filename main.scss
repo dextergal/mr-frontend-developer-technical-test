@@ -34,7 +34,9 @@ body {
             margin: 0 auto;
             margin-top: 18px;
             position: relative;
-           
+           @include respond-to (767) {
+                max-width: 90%;
+           }
             button {
                 color: #888888;
                 border: 0;
@@ -43,6 +45,13 @@ body {
                 position: relative;
                 border: 1px solid transparent;
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                .label {
+                    @include respond-to(767) {
+                        display: none;
+                    }
+                }
                 &.active {
                     background: #fff;
                     border: 1px solid #ccc;
@@ -69,6 +78,16 @@ body {
                 position: relative;
                 display: inline-block;
                 right: 10%;
+                .mycart-btn {
+                    .label {
+                        margin-right: 4px;
+                    }
+                    @include min (767) {
+                        img {
+                            display: none;
+                        }
+                    }
+                }
                 @include respond-to (767) {
                     right: 0;
                 }
@@ -79,7 +98,7 @@ body {
                     border: 1px solid #ccc;
                     right: 0;
                     color: #222222;
-                    min-width: 21.5em;
+                    min-width: 18.2em;
                     max-height: 34em;
                     overflow: auto;
                     
